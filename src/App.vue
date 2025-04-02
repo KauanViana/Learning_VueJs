@@ -5,15 +5,17 @@
     <h1>Apps</h1>
     <div class="pageOptions">
       <button @click="changePage('trafficLight')">Traffic Light Simulator</button>
-      <button @click="changePage('trafficLight')">Traffic Light Simulator</button>
+      <button @click="changePage('numCounter')">Counter of Numbers</button>
       <button @click="changePage('trafficLight')">Traffic Light Simulator</button>
     </div>
   </div>
+  <NumCounter v-if="appIndex === 'numCounter'"></NumCounter>
 </template>
 
 <script>
 import ThemeSelector from './components/ThemeSelector.vue'
 import BackToHome from './components/BackToHome.vue'
+import NumCounter from './components/NumCounter.vue'
 
 export default {
   name: 'App',
@@ -24,13 +26,16 @@ export default {
   }, 
   components: {
     ThemeSelector,
-    BackToHome
+    BackToHome,
+    NumCounter
   },
   methods: {
     changePage(index) {
       this.appIndex = index
       switch (index) {
         case 'trafficLight':
+          break
+        case 'numCounter':
           break
       }
     }
@@ -47,7 +52,7 @@ export default {
   margin-top: 5em;
 }
 
-.pageOptions button {
+button {
   height: 70px;
   width: 23em;
   background-color: darkslateblue;
@@ -58,7 +63,7 @@ export default {
   margin: 0 0 15px 0;
 }
 
-.pageOptions button:hover {
+button:hover {
   background-color: v-bind(bgColor);
   border: 1px solid darkslateblue;
   color: darkslateblue;
