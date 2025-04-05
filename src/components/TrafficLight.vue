@@ -47,69 +47,79 @@ export default {
 </script>
 
 <style scoped>
-    .traffic-box{
-        width: 20em;
-        display: flex;
-        margin: auto;
-        background-color: aliceblue;
-    }
+  @font-face {
+  font-family: 'DS-Digital';
+  src: url('../assets/DS-DIGIB.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
 
-    .traffic-container {
-        background-color: rgb(38, 41, 41);
-        width: 20em;
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px;
-        padding-block: 15px;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
 
-    .light-box {
-        display: flex;
-        justify-content: center;
-        width: 10em;
-        height: 20em;
-        justify-items: center;
+  .traffic-box{
+      width: 20em;
+      display: flex;
+      margin: auto;
+      background-color: aliceblue;
+  }
 
-        width: 45%;
-    }
+  .traffic-container {
+      background-color: rgb(38, 41, 41);
+      width: 20em;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      padding-block: 15px;
+      max-width: 100%;
+      box-sizing: border-box;
+  }
 
-    .light-circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 10em;
-        height: 100%;
-        background-color: rgb(70, 70, 70);
-        border: 2px solid black;
-        border-radius: 5px;
-    }
+  .light-box {
+      display: flex;
+      justify-content: center;
+      width: 10em;
+      height: 20em;
+      justify-items: center;
 
-    .circle {
-        margin-block: 5px;
-        border-radius: 50%;
-        height: 5.5em;
-        width: 5.5em;
-        background-color: rgb(46, 46, 46);
-    }
+      width: 45%;
+  }
 
-    #red.active {  background-color: red; opacity: 1;  }
-    #yellow.active {  background-color: yellow; opacity: 1;  }
-    #green.active {  background-color: green; opacity: 1;  }
+  .light-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 10em;
+      height: 100%;
+      background-color: rgb(70, 70, 70);
+      border: 2px solid black;
+      border-radius: 5px;
+  }
 
-    .counter-box {
-        width: 45%;
-        height: 20em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .circle {
+      margin-block: 5px;
+      border-radius: 50%;
+      height: 5.5em;
+      width: 5.5em;
+      background-color: rgb(46, 46, 46);
+  }
 
-    .counter-box h3 {
-        font-size: 50pt;
-    }
+  #red.active {  background-color: red; opacity: 1;  }
+  #yellow.active {  background-color: yellow; opacity: 1;  }
+  #green.active {  background-color: green; opacity: 1;  }
+
+  .counter-box {
+      width: 45%;
+      height: 20em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .counter-box h3 {
+      font-size: 50pt;
+      color: white;
+      font-family: 'DS-Digital';
+  }
 </style>
