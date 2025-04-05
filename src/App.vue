@@ -1,21 +1,23 @@
 <template>
+  <h1>{{ appIndex }}</h1>
   <ThemeSelector></ThemeSelector>
   <BackToHome v-if="appIndex != 'Home'" @click="appIndex = 'Home'"></BackToHome>
   <div v-if="appIndex === 'Home'" class="home">
-    <h1>Apps</h1>
     <div class="pageOptions">
-      <button @click="changePage('trafficLight')">Traffic Light Simulator</button>
-      <button @click="changePage('numCounter')">Counter of Numbers</button>
-      <button @click="changePage('trafficLight')">Traffic Light Simulator</button>
+      <button @click="changePage('Traffic Light Simulator')">Traffic Light Simulator</button>
+      <button @click="changePage('Counter of Numbers')">Counter of Numbers</button>
+      <button @click="changePage('Traffic Light Simulator')">Traffic Light Simulator</button>
     </div>
   </div>
-  <NumCounter v-if="appIndex === 'numCounter'"></NumCounter>
+  <NumCounter v-if="appIndex === 'Counter of Numbers'"></NumCounter>
+  <TrafficLight v-if="appIndex === 'Traffic Light Simulator'"></TrafficLight>
 </template>
 
 <script>
 import ThemeSelector from './components/ThemeSelector.vue'
 import BackToHome from './components/BackToHome.vue'
 import NumCounter from './components/NumCounter.vue'
+import TrafficLight from './components/TrafficLight.vue'
 
 export default {
   name: 'App',
@@ -27,15 +29,16 @@ export default {
   components: {
     ThemeSelector,
     BackToHome,
-    NumCounter
+    NumCounter,
+    TrafficLight
   },
   methods: {
     changePage(index) {
       this.appIndex = index
       switch (index) {
-        case 'trafficLight':
+        case 'Traffic Light Simulator':
           break
-        case 'numCounter':
+        case 'Counter of Numbers':
           break
       }
     }

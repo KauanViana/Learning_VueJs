@@ -48,7 +48,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .btn-theme {
         position: absolute;
         right: 20px;

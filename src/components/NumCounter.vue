@@ -43,7 +43,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .container button {
         margin-inline: 5px;
         width: 25%;

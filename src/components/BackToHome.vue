@@ -12,7 +12,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .btn-home {
         position: absolute;
         left: 20px;
