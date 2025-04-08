@@ -6,11 +6,12 @@
     <div class="pageOptions">
       <button @click="changePage('Traffic Light Simulator')">Traffic Light Simulator</button>
       <button @click="changePage('Counter of Numbers')">Counter of Numbers</button>
-      <button @click="changePage('Traffic Light Simulator')">Traffic Light Simulator</button>
+      <button @click="changePage('Simple Task List')">Simple Task List</button>
     </div>
   </div>
   <NumCounter v-if="appIndex === 'Counter of Numbers'"></NumCounter>
   <TrafficLight v-if="appIndex === 'Traffic Light Simulator'"></TrafficLight>
+  <SimpleTaskList v-if="appIndex === 'Simple Task List'"></SimpleTaskList>
 </template>
 
 <script>
@@ -18,6 +19,7 @@ import ThemeSelector from './components/ThemeSelector.vue'
 import BackToHome from './components/BackToHome.vue'
 import NumCounter from './components/NumCounter.vue'
 import TrafficLight from './components/TrafficLight.vue'
+import SimpleTaskList from './components/SimpleTaskList.vue'
 
 export default {
   name: 'App',
@@ -30,7 +32,8 @@ export default {
     ThemeSelector,
     BackToHome,
     NumCounter,
-    TrafficLight
+    TrafficLight,
+    SimpleTaskList
   },
   methods: {
     changePage(index) {
