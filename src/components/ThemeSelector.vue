@@ -50,7 +50,7 @@
 
 <style scoped>
     .btn-theme {
-        position: absolute;
+        position: fixed;
         right: 20px;
         bottom: 20px;
     }
@@ -58,9 +58,6 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        border: none;
-        background-color: darkslateblue;
-        color: white;
         align-items: center;
         justify-content: center;
         transition: width 0.2s ease, border-radius 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -68,8 +65,5 @@
     .btn-theme button:hover{
         width: 100px;
         border-radius: 5px;
-        border: 1px solid darkslateblue;
-        background-color: v-bind(bgColor);
-        color: darkslateblue;
     }
 </style>

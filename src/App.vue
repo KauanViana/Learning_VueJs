@@ -1,14 +1,17 @@
 <template>
   <h1>{{ appIndex }}</h1>
+
   <ThemeSelector></ThemeSelector>
   <BackToHome v-if="appIndex != 'Home'" @click="appIndex = 'Home'"></BackToHome>
+  
   <div v-if="appIndex === 'Home'" class="home">
-    <div class="pageOptions">
-      <button @click="changePage('Traffic Light Simulator')">Traffic Light Simulator</button>
+    <div class="AppsList">
       <button @click="changePage('Counter of Numbers')">Counter of Numbers</button>
+      <button @click="changePage('Traffic Light Simulator')">Traffic Light Simulator</button>
       <button @click="changePage('Simple Task List')">Simple Task List</button>
     </div>
   </div>
+
   <NumCounter v-if="appIndex === 'Counter of Numbers'"></NumCounter>
   <TrafficLight v-if="appIndex === 'Traffic Light Simulator'"></TrafficLight>
   <SimpleTaskList v-if="appIndex === 'Simple Task List'"></SimpleTaskList>
@@ -50,7 +53,7 @@ export default {
 </script>
 
 <style>
-.pageOptions {
+.AppsList {
   display: flex;
   flex-direction: column;
   align-items: center;
